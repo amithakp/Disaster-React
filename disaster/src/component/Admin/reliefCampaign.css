@@ -1,0 +1,41 @@
+.background{
+    background-image: url("https://i.ibb.co/8KWHXMR/annie-spratt-wuc-KEIBrd-E-unsplash.jpg");
+    width: 100%;
+    height: 750px;
+    background-size: 100% 750px;
+    background-repeat: no-repeat;
+    color: rgb(46, 43, 43);
+    margin-top: -22px;
+    margin-top: 1px;
+    /* width: 100%;
+    height: 500px;
+    background-size: 100% 722px;
+    background-repeat: no-repeat;
+    color: rgb(46, 43, 43);
+    background-size: cover;
+    margin-top: -22px;
+    padding: 35px;
+    margin-top: 1px;    */
+}
+
+.background .text{
+    color: white;
+    font-size: 42px;
+    text-align: center;
+}
+.subText{
+    color: white;
+    font-size: 25px;
+    width: 50%;
+    margin-left: 25%;
+    text-align: center;
+    padding: 30px;
+}
+.email{
+    color: #7b1815;
+    font-size: 25px;
+    width: 50%;
+    margin-left: 25%;
+    text-align: center;
+    margin-top: -37px;
+}

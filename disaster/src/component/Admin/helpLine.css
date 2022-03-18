@@ -1,0 +1,19 @@
+.mainContainer{
+    width: 100%;
+    height: auto;
+    background-color:rgb(214, 214, 214);
+    /* background-color: rgb(225 219 219 / 36%); */
+    margin-top: 60px;
+}
+.mainHead{
+    padding:10px;
+}
+.mainText{
+    font-size:25px;
+    text-align:justify;
+}
+.mainSubText{
+    font-size:20px;
+    text-align:justify;
+    margin-top:-32px;    
+}

@@ -1,0 +1,41 @@
+.container-fluid {
+    /* padding: 40px 30px; */
+    transition:1s;
+}
+
+
+.panel-success{
+    width: 350px;
+    height: 350px;
+    border: 2px solid aliceblue;
+    padding: 12px;
+}
+
+.panel-heading> span{
+    color: rgb(8, 8, 8);
+    font-weight: bold;
+    font-size: 28px;
+}
+
+
+.panel-body > h3{
+    color: red!important;
+}
+#login-span{
+    margin-left: 4px !important;
+}
+
+.parent-section{
+    text-align: center;
+    display: block;
+    color: rgb(8, 8, 8);
+    padding-top:24px;
+}
+
+label{
+    color: rgb(8, 8, 8);
+}
+.form-control{
+    padding: 0.375rem 0.75rem;
+    border-radius: 1.25rem;
+}
