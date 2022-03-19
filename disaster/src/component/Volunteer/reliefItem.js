@@ -6,6 +6,13 @@ class ReliefItem extends Component {
         super(props)
     }
     render(){
+        if(localStorage.getItem('ltk') == null){
+            return(
+                <>
+                <h2>You Need to Login First </h2>
+                </>
+            )
+            }   
         return (
             <>
                 <VolunteerHeader/>
