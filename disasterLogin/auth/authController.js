@@ -31,7 +31,7 @@ router.post('/register',(req, res) => {
                 name: req.body.name,
                 email: req.body.email,
                 password:hashpassword,
-                role: req.body.role
+                role:req.body.role?req.body.role:'Volunteer'
             },(err,data) => {
                 if(err) return res.status(500).send('Error While Register')
                 res.status(200).send('Register Successful')
@@ -43,6 +43,7 @@ router.post('/register',(req, res) => {
 //login user http://localhost:5000/api/auth/login
 router.post('/login',(req, res) => {
     User.findOne({email:req.body.email},(err,user) => {
+        console.log(user)
         if(err) return res.status(500).send({auth:false,token:'Error while login'});
         console.log(user);
         if(!user) return res.status(500).send({auth:false,token:'No user found'});

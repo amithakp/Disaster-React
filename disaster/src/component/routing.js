@@ -1,7 +1,7 @@
 import React from 'react';
 import {BrowserRouter,Route} from 'react-router-dom';
 import Login from './Login/login';
-import Register from './Login/register';
+import RegisterAdmin from './Login/registerAdmin';
 import Home from './Home/home';
 import ReliefCenter from './Volunteer/reliefCenter';
 import ReliefItem from './Volunteer/reliefItem';
@@ -18,7 +18,7 @@ const Routing = () => {
     return(
         <BrowserRouter>
             <Route exact path="/" component={Home}/>
-            <Route  path="/register" component={Register}/>
+            <Route  path="/registerAdmin" component={RegisterAdmin}/>
             <Route  path="/login" component={Login}/>
             <Route  path="/reliefCenter" component={ReliefCenter}/>
             <Route  path="/reliefItem" component={ReliefItem}/>

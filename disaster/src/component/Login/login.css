@@ -2,7 +2,10 @@
     /* padding: 40px 30px; */
     transition:1s;
 }
-
+ .message{
+     color: red;
+     font-size:18px;
+ }
 
 .panel-success{
     width: 350px;
