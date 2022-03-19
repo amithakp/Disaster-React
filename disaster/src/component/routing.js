@@ -1,7 +1,9 @@
 import React from 'react';
 import {BrowserRouter,Route} from 'react-router-dom';
 import Login from './Login/login';
+import VolunteerLogin from './Login/volunteerLogin';
 import RegisterAdmin from './Login/registerAdmin';
+import RegisterVolunteer from './Login/registerVolunteer';
 import Home from './Home/home';
 import ReliefCenter from './Volunteer/reliefCenter';
 import ReliefItem from './Volunteer/reliefItem';
@@ -13,13 +15,18 @@ import BlogAdmin from './Admin/blog';
 import ReliefCampaign from './Admin/reliefCampaign';
 import HelpLine from './Admin/helpLine';
 import NewsAdmin from './Admin/news';
-
+import AdminHeader from './Admin/adminHeader';
+import VolunteerHeader from './Volunteer/volunteerHeader';
 const Routing = () => {
     return(
         <BrowserRouter>
             <Route exact path="/" component={Home}/>
+            <Route  path="/adminHeader" component={AdminHeader}/>
+            <Route  path="/volunteerHeader" component={VolunteerHeader}/>
             <Route  path="/registerAdmin" component={RegisterAdmin}/>
+            <Route  path="/registerVolunteer" component={RegisterVolunteer}/>
             <Route  path="/login" component={Login}/>
+            <Route  path="/volunteerLogin" component={VolunteerLogin}/>
             <Route  path="/reliefCenter" component={ReliefCenter}/>
             <Route  path="/reliefItem" component={ReliefItem}/>
             <Route  path="/blog" component={Blog}/>

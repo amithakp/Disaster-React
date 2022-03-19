@@ -4,14 +4,13 @@ import './register.css';
 
 const registerUrl ="http://localhost:5000/api/auth/register";
 
-class RegisterAdmin extends Component {
+class RegisterVolunteer extends Component {
     constructor(props){
         super(props)
         this.state = {
             name:'',
             email:'',
             password:'',
-            role:'Admin',
             message:''
         }
     }
@@ -57,13 +56,13 @@ class RegisterAdmin extends Component {
                                             value={this.state.name} onChange={this.handleChange} placeholder="Name" required/>
                                         </div>
                                     </div>
-                                    <div className="col-md-12">
+                                    {/* <div className="col-md-12">
                                         <div className="form-group">
                                             <label>Role</label>
                                             <input className="form-control" name="role" 
                                             value={this.state.role}  required/>
                                         </div>
-                                    </div>
+                                    </div> */}
                                     {/* <div className="col-md-12">
                                      <div class="form-group col-md-4">
                                             <label for="inputState">State</label>
@@ -109,4 +108,4 @@ class RegisterAdmin extends Component {
     
 }
 
-export default RegisterAdmin;
+export default RegisterVolunteer;

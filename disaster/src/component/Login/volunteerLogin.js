@@ -4,7 +4,8 @@ import {Link} from 'react-router-dom';
 import './login.css';
 
 const loginUrl ="http://localhost:5000/api/auth/login";
-class Login extends Component {
+
+class VolunteerLogin extends Component {
     constructor(props){
         super(props)
         this.state = {
@@ -35,7 +36,7 @@ class Login extends Component {
                 // localStorage.setItem('ltk',data.token)
                 // this.props.history.push('/') 
                 localStorage.setItem('ltk',data.token)
-                this.props.history.push('/adminHeader')
+                this.props.history.push('/volunteerHeader')
                 .then(this.props.loggedRole = localStorage.setItem('role',this.state.role))
             }
         })
@@ -88,7 +89,7 @@ class Login extends Component {
                                 </div>
                                 <div className="parent-section">
                                     Need an account?
-                                    <Link to="/registerAdmin">Sign Up</Link>
+                                    <Link to="/registerVolunteer">Sign Up</Link>
                                 </div>
                             </div>
                         </div>
@@ -100,4 +101,4 @@ class Login extends Component {
    
 }
 
-export default Login;
+export default VolunteerLogin;
