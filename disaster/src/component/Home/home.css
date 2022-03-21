@@ -1,7 +1,85 @@
 .homeButton{
     padding: 250px;
  }
- body{
-     /* background: linear-gradient(110deg, #fdcd3b 60%, #ffed4b 60%); */
-     background: linear-gradient(110deg, #f0eded 60%, #dfdfdf 60%);
+ 
+ .mainDisaster{
+     padding:65px;
+ }
+ .disaster{
+    width:584px;
+    height:93px;
+ }
+ .disasterName{
+     font-size:45px;
+ }
+ .disasterPara{
+    font-size: 18px;
+    text-align: justify;
+    width: 50%;
+    /* height: 105px; */
+    margin-left: -9px;
+    position: absolute;
+ }
+ /* .reliefCenter{
+    width: 143px;
+    height: 144px;
+    left: 766px;
+    top: 113px; 
+    position: absolute;
+ } */
+.disasterContainer{
+    /* width:200px;
+    height:200px;
+    background-color: goldenrod; */
+    width: 200px;
+    float: left;
+    margin-left: 750px;
+    display: inline;
+    background-color: goldenrod;
+}
+.reliefCenter{
+    width: 143px;
+    height: 144px;
+    left: 766px;
+    top: 153px; 
+    position: absolute;
+ } 
+.collectionCenter{
+    width: 143px;
+    height: 144px;
+    left: 924px;
+    top: 153px; 
+    position: absolute;
+}
+.reliefSupplyRequest{
+    width: 143px;
+    height: 144px;
+    left: 1082px;
+    top: 153px; 
+    position: absolute;
+}
+.map{
+    width: 48%;
+    height: 120px;
+    /* background-color: goldenrod; */
+    margin-top: 110px;
+    margin-left: 71px;
+    position: absolute;
+}
+   
+element.style{
+    width: 100%;
+
+}
+
+
+
+ @media(max-width:768px){
+    .disasterPara{
+        width: 75%;
+    }
+    /* .disasterRight{
+        float: left;
+        display: block;
+    } */
  }

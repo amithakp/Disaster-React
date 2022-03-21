@@ -1,0 +1,81 @@
+.paddinDiv{
+    padding:29px;
+}
+.mainSectionRow{
+    text-align: center;
+    margin-left: -65px;
+}
+.reliefCenter {
+    width: 300px;
+    height: 150px;
+    border-radius: 30px;
+}
+.totalAcoomodated {
+    width: 300px;
+    height: 150px;
+    margin-top: 8px;
+    border-radius: 30px;
+}
+.remainingVaccancy{
+    width: 300px;
+    height: 150px;
+    margin-top: 8px;
+    border-radius: 30px;
+}
+.secondSubSection{
+    margin-left: 11px;
+    margin-top: 28px;
+
+}
+.subSectionRow{
+    margin-left: 25px;
+}
+.first{
+    
+    height: 56px;
+    border-radius: 30px;
+    margin-left: 16px;
+    background-color: #807777;
+}
+.subSRHeading2{
+    width: 197px;
+    height: 38px;
+    left: 337px;
+}
+.subFHeading2{
+    width: 50px;
+    height: 25px;
+    margin-left: -42px;
+}
+.subFHeading3{
+    width: 50px;
+    height: 25px;
+    margin-left: -42px;
+}
+.notification{
+    width: 328px;
+    height: 390px;
+    margin-left: 865px;
+    margin-top: -85px;
+    display: inline-block;
+    position: absolute;
+    float: left;
+    background-color: antiquewhite;
+}
+/* @media (min-width:1096){
+    .reliefCenter {
+        width: 235px!important;
+        height: 130px!important;
+        border-radius: 30px;
+    }
+    .totalAcoomodated {
+        width: 235px;
+        height: 130px;
+        border-radius: 30px;
+    }
+    .remainingVaccancy {
+        width: 235px;
+        height: 130px;
+        border-radius: 30px;
+    }
+} */
