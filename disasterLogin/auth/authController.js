@@ -48,12 +48,20 @@ router.post('/login',(req, res) => {
         console.log(user);
         if(!user) return res.status(500).send({auth:false,token:'No user found'});
         else{
-            //compare password
+            //compare password and compare role
+            const roleIsValid =(req.body.role === user.role)
             const passIsValid = bcrypt.compareSync(req.body.password,user.password)
-            if(!passIsValid) return res.status(500).send({auth:false,token:'Invalid password'});
+            if(!roleIsValid){
+                return res.status(500).send({auth:false,token:'invalid role'}); 
+            }
+            // if(!roleIsValid) return res.status(500).send({auth:false,token:'invalid role'});
+            if(!passIsValid){
+                return res.status(500).send({auth:false,token:'Invalid password'});
+            }else{
             // in case password is valid
-            var token = jwt.sign({id:user._id}, config.secret, {expiresIn:86400}) //24 hr
-            res.send({auth:true,token:token})
+                var token = jwt.sign({id:user._id}, config.secret, {expiresIn:86400}) //24 hr
+                res.send({auth:true,token:token})
+            }                
         }
     })
 })
