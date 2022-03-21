@@ -27,16 +27,13 @@ class Login extends Component {
 
         .then((res) => res.json())
         .then((data) => {
-            console.log(data)
+            console.log("hghhhh",data)
 
             if(data.auth === false){
                 this.setState({message:data.token})
             }else{
-                // localStorage.setItem('ltk',data.token)
-                // this.props.history.push('/') 
                 localStorage.setItem('ltk',data.token)
                 this.props.history.push('/adminHeader')
-                .then(this.props.loggedRole = localStorage.setItem('role',this.state.role))
             }
         })
     }
@@ -45,14 +42,6 @@ class Login extends Component {
         this.setState({[event.target.name]:event.target.value})
     }
     render() {
-        // if(localStorage.getItem('ltk') == null){
-        //     return(
-        //         <>
-        //         <Header/>
-        //         <h2>You Need to Login First </h2>
-        //         </>
-        //     )
-        // }
         return (
             <center>  
                 <div className="container-fluid">
@@ -71,6 +60,13 @@ class Login extends Component {
                                             <label>Email</label>
                                             <input className="form-control" name="email" 
                                             value= {this.state.email} onChange={this.handleChange} placeholder="name@example.com" required/>
+                                        </div>
+                                    </div> 
+                                    <div className="col-md-12">
+                                        <div className="form-group">
+                                            <label>Role</label>
+                                            <input className="form-control" name="role" 
+                                            value= {this.state.role} onChange={this.handleChange}  required/>
                                         </div>
                                     </div> 
                                     <div className="col-md-12">

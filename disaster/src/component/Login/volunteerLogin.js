@@ -36,8 +36,9 @@ class VolunteerLogin extends Component {
                 // localStorage.setItem('ltk',data.token)
                 // this.props.history.push('/') 
                 localStorage.setItem('ltk',data.token)
+                // localStorage.setItem('role',data.role)
                 this.props.history.push('/volunteerHeader')
-                .then(this.props.loggedRole = localStorage.setItem('role',this.state.role))
+                // .then(this.props.loggedRole = localStorage.setItem('role',this.state.role))
             }
         })
     }
@@ -46,14 +47,6 @@ class VolunteerLogin extends Component {
         this.setState({[event.target.name]:event.target.value})
     }
     render() {
-        // if(localStorage.getItem('ltk') == null){
-        //     return(
-        //         <>
-        //         <Header/>
-        //         <h2>You Need to Login First </h2>
-        //         </>
-        //     )
-        // }
         return (
             <center>  
                 <div className="container-fluid">
@@ -72,6 +65,13 @@ class VolunteerLogin extends Component {
                                             <label>Email</label>
                                             <input className="form-control" name="email" 
                                             value= {this.state.email} onChange={this.handleChange} placeholder="name@example.com" required/>
+                                        </div>
+                                    </div> 
+                                    <div className="col-md-12">
+                                        <div className="form-group">
+                                            <label>Role</label>
+                                            <input className="form-control" name="role" 
+                                            value= {this.state.role} onChange={this.handleChange}  required/>
                                         </div>
                                     </div> 
                                     <div className="col-md-12">
