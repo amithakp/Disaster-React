@@ -11,7 +11,7 @@ class RegisterAdmin extends Component {
             name:'',
             email:'',
             password:'',
-            role:'Admin',
+            role:'',
             message:''
         }
     }

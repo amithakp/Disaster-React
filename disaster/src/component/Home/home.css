@@ -282,6 +282,20 @@ iframe {
         margin-left: 435px;
     }
 }
+/* @media(max-width:1024px){
+    .disaster{
+        float: none!important;
+        width: 80%;
+        margin-left: 5px;
+    }
+    .disasterName {
+        left: 74px;
+        margin-top: -53px;
+    }
+    .disasterPara{
+        width: 113%;
+    }
+} */
 @media(max-width: 1000px){
     .analyticsMain{
         margin-right: 5%;

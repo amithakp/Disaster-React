@@ -59,8 +59,8 @@ router.post('/login',(req, res) => {
                 return res.status(500).send({auth:false,token:'Invalid password'});
             }else{
             // in case password is valid
-                var token = jwt.sign({id:user._id}, config.secret, {expiresIn:86400}) //24 hr
-                res.send({auth:true,token:token})
+                var token = jwt.sign({id:user._id},config.secret, {expiresIn:86400}) //24 hr
+                res.send({role:user.role,auth:true,token:token})
             }                
         }
     })

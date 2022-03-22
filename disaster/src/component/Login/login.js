@@ -41,9 +41,14 @@ class Login extends Component {
             }
                 else{
                 localStorage.setItem('ltk',data.token)
+                localStorage.setItem('role',data.role)
                 // console.log("redirecting to volunteer")
+                if(data.role === "Admin"){
+                    this.props.history.push('/adminHeader')
+                }else{
+                    this.props.history.push('/volunteerHeader')
 
-                this.props.history.push('/adminHeader')
+                }
             }
         })
     }

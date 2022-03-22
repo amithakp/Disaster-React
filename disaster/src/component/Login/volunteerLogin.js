@@ -33,12 +33,15 @@ class VolunteerLogin extends Component {
             if(data.auth === false){
                 this.setState({message:data.token})
             }else{
-                // localStorage.setItem('ltk',data.token)
-                // this.props.history.push('/') 
                 localStorage.setItem('ltk',data.token)
-                // localStorage.setItem('role',data.role)
-                this.props.history.push('/volunteerHeader')
-                // .then(this.props.loggedRole = localStorage.setItem('role',this.state.role))
+                localStorage.setItem('role',data.role)
+                // console.log("redirecting to volunteer")
+                if(data.role === "Admin"){
+                    this.props.history.push('/adminHeader')
+                }else{
+                    this.props.history.push('/volunteerHeader')
+
+                }
             }
         })
     }
