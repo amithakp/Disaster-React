@@ -2,6 +2,7 @@ import React,{Component} from 'react';
 import {Redirect} from 'react-router';
 import {Link} from 'react-router-dom';
 import './login.css';
+// import {isAuthenticated} from '../../../../disasterLogin/auth/authController';
 
 const loginUrl ="http://localhost:5000/api/auth/login";
 class Login extends Component {
@@ -31,8 +32,17 @@ class Login extends Component {
 
             if(data.auth === false){
                 this.setState({message:data.token})
-            }else{
+            // }if(data.role ==='Admin'){
+            //     console.log("redirecting to admin")
+            //     this.props.history.push('/adminHeader');
+            // }
+            // if(isAuthenticated().role === "Admin"){
+            //     console.log("redirecting to admin")
+            }
+                else{
                 localStorage.setItem('ltk',data.token)
+                // console.log("redirecting to volunteer")
+
                 this.props.history.push('/adminHeader')
             }
         })
@@ -62,13 +72,13 @@ class Login extends Component {
                                             value= {this.state.email} onChange={this.handleChange} placeholder="name@example.com" required/>
                                         </div>
                                     </div> 
-                                    <div className="col-md-12">
+                                    {/* <div className="col-md-12">
                                         <div className="form-group">
                                             <label>Role</label>
                                             <input className="form-control" name="role" 
                                             value= {this.state.role} onChange={this.handleChange}  required/>
                                         </div>
-                                    </div> 
+                                    </div>  */}
                                     <div className="col-md-12">
                                         <div className="form-group">
                                             <label>Password</label>

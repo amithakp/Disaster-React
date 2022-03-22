@@ -278,6 +278,9 @@ iframe {
         margin-right: 6%;
         width: 45%;
     }
+    .disasterRight{
+        margin-left: 435px;
+    }
 }
 @media(max-width: 1000px){
     .analyticsMain{

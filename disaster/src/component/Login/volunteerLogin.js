@@ -67,13 +67,13 @@ class VolunteerLogin extends Component {
                                             value= {this.state.email} onChange={this.handleChange} placeholder="name@example.com" required/>
                                         </div>
                                     </div> 
-                                    <div className="col-md-12">
+                                    {/* <div className="col-md-12">
                                         <div className="form-group">
                                             <label>Role</label>
                                             <input className="form-control" name="role" 
                                             value= {this.state.role} onChange={this.handleChange}  required/>
                                         </div>
-                                    </div> 
+                                    </div>  */}
                                     <div className="col-md-12">
                                         <div className="form-group">
                                             <label>Password</label>

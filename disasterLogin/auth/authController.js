@@ -49,11 +49,11 @@ router.post('/login',(req, res) => {
         if(!user) return res.status(500).send({auth:false,token:'No user found'});
         else{
             //compare password and compare role
-            const roleIsValid =(req.body.role === user.role)
+            // const roleIsValid =(req.body.role === user.role)
             const passIsValid = bcrypt.compareSync(req.body.password,user.password)
-            if(!roleIsValid){
-                return res.status(500).send({auth:false,token:'invalid role'}); 
-            }
+            // if(!roleIsValid){
+            //     return res.status(500).send({auth:false,token:'invalid role'}); 
+            // }
             // if(!roleIsValid) return res.status(500).send({auth:false,token:'invalid role'});
             if(!passIsValid){
                 return res.status(500).send({auth:false,token:'Invalid password'});

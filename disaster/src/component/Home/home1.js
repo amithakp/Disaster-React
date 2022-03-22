@@ -23,58 +23,48 @@ class Home1 extends Component{
                     </div>
                 </div>
             </div> 
-            <div className="subMain">
-                <div className="secondSubSection">
-                    <div className="row subSectionRow">
-                        <div className="col">
-                            <div className="subSRHeading1">Relief Center Details</div>
-                        </div>
-                        <div className="col">
-                            <div className="subSRHeading2">Total Accomodation</div>
-                        </div>
-                        <div className="col">
-                            <div className="subSRHeading3">Vaccancy</div>
-                        </div>
-                    </div>
-                    <div className="row first">
-                        <div className="col ">
-                            <div className="subFHeading1">IHRD College,Thrissur</div>
-                        </div>
-                        <div className="col">
-                            <div className="subFHeading2">418</div>
-                        </div>
-                        <div className="col">
-                            <div className="subFHeading3">12</div>
-                        </div>
-                        <div className="col ">
-                            <button className="btn btn-success"></button>
-                        </div>
-                    </div>
-                        {/* <div className="col">
-                            <span>Total Accomodation</span>
-                        </div>
-                        <div className="col">
-                            <span>Vaccancy</span>
-                        </div>
-                    </div> */}
-                </div>    
-                
-                
-                <div className="notification">
-                    <span>Notification</span>
-                    <div className="row ">
-                        <div className="col">
-                            <button className="notification1">Relief Center Details</button>
-                        </div>
-                        <div className="row ">
-                            <div className="col">
-                                <button className="notification2">Total Accomodation</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div className="tableSection">
+                <table class="table">
+                    <thead>
+                        <tr>
+                        <th scope="col">Relief Center Details</th>
+                        <th scope="col">Total Accomodation</th>
+                        <th scope="col">Vaccancy</th>
+                        <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                        <td scope="row">IHRD College,Thrissur</td>
+                        <td>418</td>
+                        <td>21</td>
+                        <td><button className="btn btn-dark">Details</button></td>
+                        </tr>
+                        <tr>
+                        <td scope="row">Cochin University of Science and Technology,Kochi</td>
+                        <td>418</td>
+                        <td>12</td>
+                        <td><button className="btn btn-dark">Details</button></td>
+                        </tr>
+                        <tr>
+                        <td scope="row">Vidya College ,Thrissur</td>
+                        <td>418</td>
+                        <td>12</td>
+                        <td><button className="btn btn-dark">Details</button></td>
+                        </tr>
+                        <tr>
+                        <td scope="row">St.Johns College, Thirumala</td>
+                        <td>418</td>
+                        <td>12</td>
+                        <td><button className="btn btn-dark">Details</button></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
+            <div className="notificationSection">
+
             </div>
+        </div>
         )
     }
     

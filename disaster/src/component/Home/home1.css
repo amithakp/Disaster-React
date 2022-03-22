@@ -1,5 +1,11 @@
 .paddinDiv{
-    padding:29px;
+    padding: 52px;
+    margin-top: 400px;
+}
+.secondMainSection{
+    margin-left: 2%;
+    padding: 3%;
+    margin-top: -77px;
 }
 .mainSectionRow{
     text-align: center;
@@ -8,6 +14,7 @@
 .reliefCenter1 {
     width: 300px;
     height: 150px;
+    margin-top: 8px;
     border-radius: 30px;
 }
 .totalAcoomodated {
@@ -59,23 +66,164 @@
     margin-top: -85px;
     display: inline-block;
     position: absolute;
-    float: left;
+    /* float: left; */
     background-color: antiquewhite;
 }
-/* @media (min-width:1096){
-    .reliefCenter {
-        width: 235px!important;
-        height: 130px!important;
-        border-radius: 30px;
+.tableSection{
+    margin-left: 18px;
+    float: left;
+}
+.notificationSection{
+    width: 337px;
+    height: 314px;
+    float: right;
+    margin-right: 90px;
+    margin-top: -7px;
+    border-radius: 30px;
+    background-color: #FFFFFF;
+}
+@media(max-width:1466px){
+    .mainSectionRow {
+        margin-left: -120px;
     }
-    .totalAcoomodated {
-        width: 235px;
-        height: 130px;
-        border-radius: 30px;
+}
+@media(max-width:1458px){
+    .notificationSection{
+        margin-right: 92px;
     }
-    .remainingVaccancy {
-        width: 235px;
-        height: 130px;
-        border-radius: 30px;
+}
+@media(max-width:1425px){
+    .notificationSection{
+        margin-right: 84px;
     }
-} */
+}
+@media(max-width:1400px){
+    .notificationSection{
+        margin-right: 86px;
+    }
+}
+
+
+@media(max-width:1395px){
+    .notificationSection{
+        margin-right: 89px;
+    }
+}
+@media(max-width:1350px){
+    .notificationSection{
+        margin-right: 78px;
+    }
+}
+@media(max-width:1340px){
+    .mainSectionRow {
+        margin-left: -98px;
+    }
+    .notificationSection{
+        margin-right: 66px;
+    }
+}
+@media(max-width:1320px){
+    .notificationSection{
+        margin-right: 65px;
+    }
+}
+@media(max-width:1300px){
+    .notificationSection{
+        margin-right: 60px;
+    }
+}
+
+@media(max-width:1250px){
+    .notificationSection{
+        margin-right: 46px;
+    }
+    .tableSection {
+        margin-left: -2px;
+    }
+}
+
+@media(max-width:1240px){
+    .mainSectionRow {
+        margin-left: -58px;
+    }
+    .notificationSection{
+        margin-right: 7px;
+    }
+}
+@media(max-width:1175px){
+    .notificationSection{
+        margin-right: 25px;
+        width: 310px;
+    }
+}
+@media(max-width:1168px){
+    .notificationSection{
+        margin-right: 30px;
+        width: 296px;
+        margin-top: 15px;
+    }
+    .tableSection{
+        margin-left: 18px;
+        width: 628px;
+    }
+}
+@media(max-width:1140px){
+    .mainSectionRow {
+        margin-left: -52px;
+    }
+    .notificationSection{
+        margin-right: 38px;
+    }
+}
+@media(max-width:1110px){
+    .notificationSection{
+        margin-right: 7px;
+    }
+    .tableSection{
+        margin-left: 15px;
+        width: 620px;
+    }
+}
+@media(max-width:1070px){
+    .notificationSection{
+        margin-right: -8px;
+    }
+    .tableSection{
+        margin-left: 10px;
+        width: 600px;
+    }
+}
+@media(max-width:1058px){
+    .notificationSection{
+        margin-right: -4px;
+    }
+}
+@media(max-width:768px){
+    .secondMainSection {
+        margin-left: 5%;
+        padding: 3%;
+        margin-top: -77px;
+    }
+    .notificationSection{
+        margin-right: 188px;
+    }
+}
+@media(max-width:700px){
+    .mainSectionRow {
+        margin-left: -19px;
+    }
+
+}
+@media(max-width:578px){
+    .tableSection{
+        margin-left: 21px;
+    }
+}
+@media(max-width:560px){
+    .mainSectionRow {
+        margin-left: -2px;
+    }
+    .tableSection{
+        margin-left: -5px;
+    }
+}
