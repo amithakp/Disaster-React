@@ -10,7 +10,7 @@ class Home1 extends Component{
             <div className="secondMainSection">
                 <div className="row mainSectionRow">
                     <div className="col">
-                        <button className=" reliefCenter btn btn-success"><span>45</span>
+                        <button className=" reliefCenter1 btn btn-success"><span>45</span>
                             <div>Relief Center Opened</div></button>
                     </div>
                     <div className="col">
