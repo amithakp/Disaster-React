@@ -1,5 +1,6 @@
 import React,{ Component} from 'react';
 import {Link} from 'react-router-dom';
+
 import './register.css';
 
 const registerUrl ="http://localhost:5000/api/auth/register";
@@ -11,7 +12,7 @@ class RegisterAdmin extends Component {
             name:'',
             email:'',
             password:'',
-            role:'',
+            role:'Admin',
             message:''
         }
     }
@@ -59,28 +60,6 @@ class RegisterAdmin extends Component {
                                     </div>
                                     <div className="col-md-12">
                                         <div className="form-group">
-                                            <label>Role</label>
-                                            <input className="form-control" name="role" 
-                                            value={this.state.role}  required/>
-                                        </div>
-                                    </div>
-                                    {/* <div className="col-md-12">
-                                     <div class="form-group col-md-4">
-                                            <label for="inputState">State</label>
-                                            <select id="inputState" class="form-control">
-                                                <option selected>Choose...</option>
-                                                <option>...</option>
-                                            </select>
-                                        </div> 
-                                        <label>Role</label>
-                                        <select className="form-select" onChange={this.handleChange} aria-label="Default select example">
-                                            <option selected value={this.state.role}> select role</option>
-                                            <option value={this.state.role}>Admin</option>
-                                            <option value={this.state.role}>Volunteer</option>
-                                        </select>
-                                    </div> */}
-                                    <div className="col-md-12">
-                                        <div className="form-group">
                                             <label>Email</label>
                                             <input className="form-control" name="email" 
                                             value={this.state.email} onChange={this.handleChange} placeholder="name@example.com" required/>
@@ -98,6 +77,10 @@ class RegisterAdmin extends Component {
                                     <button  className="btn btn-success" onClick={this.handleSubmit}>
                                         Register
                                     </button>
+                                </div>
+                                <div className="parent-section">
+                                    Back To Login?
+                                    <Link to="/login">SignIn</Link>
                                 </div>
                             </div>
                         </div>

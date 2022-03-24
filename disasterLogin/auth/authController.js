@@ -24,8 +24,8 @@ router.post('/register',(req, res) => {
     var email =req.body.email
     User.find({email:email},(err,data) => {
         if(data.length>0){
-            console.log(data)
-            res.status(500).send({auth:false,token:'Email Already Token'})
+            // console.log(data)
+             res.status(500).send({auth:false,token:'Email Already Token'})
         }else{
             User.create({
                 name: req.body.name,
@@ -48,13 +48,7 @@ router.post('/login',(req, res) => {
         console.log(user);
         if(!user) return res.status(500).send({auth:false,token:'No user found'});
         else{
-            //compare password and compare role
-            // const roleIsValid =(req.body.role === user.role)
             const passIsValid = bcrypt.compareSync(req.body.password,user.password)
-            // if(!roleIsValid){
-            //     return res.status(500).send({auth:false,token:'invalid role'}); 
-            // }
-            // if(!roleIsValid) return res.status(500).send({auth:false,token:'invalid role'});
             if(!passIsValid){
                 return res.status(500).send({auth:false,token:'Invalid password'});
             }else{

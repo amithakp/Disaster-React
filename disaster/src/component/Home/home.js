@@ -23,8 +23,8 @@ class Home extends Component{
                 </ul>
                 </div>
                 <form className="d-flex">
-                    <Link to="/login"  className="btn btn-outline-primary">Admin</Link>&nbsp;&nbsp;
-                    <Link to="/volunteerLogin"  className="btn btn-outline-success">Volunteer</Link>
+                    <Link to="/registerAdmin"  className="btn btn-outline-primary">Admin</Link>&nbsp;&nbsp;
+                    <Link to="/registerVolunteer"  className="btn btn-outline-success">Volunteer</Link>
                 </form>
             </div>
         </nav>

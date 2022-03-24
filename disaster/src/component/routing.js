@@ -1,9 +1,10 @@
 import React from 'react';
 import {BrowserRouter,Route} from 'react-router-dom';
 import Login from './Login/login';
-import VolunteerLogin from './Login/volunteerLogin';
+// import VolunteerLogin from './Login/volunteerLogin';
+// import Register from './Login/register';
 import RegisterAdmin from './Login/registerAdmin';
-import RegisterVolunteer from './Login/registerVolunteer';
+import VolunteerAdmin from './Login/registerVolunteer';
 import Home from './Home/home';
 import ReliefCenter from './Volunteer/reliefCenter';
 import ReliefItem from './Volunteer/reliefItem';
@@ -24,9 +25,10 @@ const Routing = () => {
             <Route  path="/adminHeader" component={AdminHeader}/>
             <Route  path="/volunteerHeader" component={VolunteerHeader}/>
             <Route  path="/registerAdmin" component={RegisterAdmin}/>
-            <Route  path="/registerVolunteer" component={RegisterVolunteer}/>
+            <Route  path="/registerVolunteer" component={VolunteerAdmin}/>
+            {/* <Route  path="/register" component={Register}/> */}
             <Route  path="/login" component={Login}/>
-            <Route  path="/volunteerLogin" component={VolunteerLogin}/>
+            {/* <Route  path="/login" component={Login}/> */}
             <Route  path="/reliefCenter" component={ReliefCenter}/>
             <Route  path="/reliefItem" component={ReliefItem}/>
             <Route  path="/blog" component={Blog}/>

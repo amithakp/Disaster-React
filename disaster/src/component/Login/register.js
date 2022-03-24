@@ -1,23 +1,23 @@
-import React,{Component} from 'react';
-import {Redirect} from 'react-router';
+import React,{ Component} from 'react';
 import {Link} from 'react-router-dom';
-import './login.css';
-// import {isAuthenticated} from '../../../../disasterLogin/auth/authController';
+import './register.css';
 
-const loginUrl ="http://localhost:5000/api/auth/login";
-class Login extends Component {
+const registerUrl ="http://localhost:5000/api/auth/register";
+
+class Register extends Component {
     constructor(props){
         super(props)
         this.state = {
+            name:'',
             email:'',
             password:'',
-            role:'',
+            role:'Admin',
             message:''
         }
     }
-    
+
     handleSubmit = () => {
-        fetch(loginUrl,{
+        fetch(registerUrl,{
             method:'POST',
             headers:{
                 'accept': 'application/json',
@@ -25,70 +25,62 @@ class Login extends Component {
             },
             body:JSON.stringify(this.state)
         })
-
         .then((res) => res.json())
         .then((data) => {
-            console.log("hghhhh",data)
+            console.log("inside register",data)
 
             if(data.auth === false){
                 this.setState({message:data.token})
             }
-            else{
-                // localStorage.setItem('ltk',data.token)
-                // localStorage.setItem('role',data.role)
-                // console.log("redirecting to volunteer")
-                if(data.role === "Admin"){
-                    this.props.history.push('/adminHeader')
-                }else{
-                    this.props.history.push('/volunteerHeader')
+                this.props.history.push('/login')
 
-                }
-            }
+            
         })
     }
 
     handleChange = (event) => {
+        console.log(event.target.value)
         this.setState({[event.target.name]:event.target.value})
     }
-    render() {
+
+    render(){
         return (
-            <center>  
+            <center>
                 <div className="container-fluid">
                 <br/>
                 <div className="panel panel-success">
                     <div className="panel-heading">
-                    <span id="login-span">Login</span>
-                    </div>
-                    <div className="panel-body">
-                    <div className ="message">{this.state.message}</div>
-                            
-                            <div className="row">
+                            <span>Register</span>
+                        </div>
+                        <div className="panel-body">
+                            <h3 style={{color:'red'}}>{this.state.message}</h3>
+                        <div className="row">
                                 <div className="col-md-12">
+                                    <div className="col-md-12">
+                                        <div className="form-group">
+                                            <label>Name</label>
+                                            <input className="form-control" name="name" 
+                                            value={this.state.name} onChange={this.handleChange} placeholder="Name" required/>
+                                        </div>
+                                    </div>
                                     <div className="col-md-12">
                                         <div className="form-group">
                                             <label>Email</label>
                                             <input className="form-control" name="email" 
-                                            value= {this.state.email} onChange={this.handleChange} placeholder="name@example.com" required/>
+                                            value={this.state.email} onChange={this.handleChange} placeholder="name@example.com" required/>
                                         </div>
                                     </div> 
-                                    {/* <div className="col-md-12">
-                                        <div className="form-group">
-                                            <label>Role</label>
-                                            <input className="form-control" name="role" 
-                                            value= {this.state.role} onChange={this.handleChange}  required/>
-                                        </div>
-                                    </div>  */}
                                     <div className="col-md-12">
                                         <div className="form-group">
                                             <label>Password</label>
                                             <input className="form-control" name="password" type="password" 
-                                             value= {this.state.password} onChange={this.handleChange} required/>
+                                            value={this.state.password} onChange={this.handleChange} required/>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="parent-section">
-                                    <button  className="btn btn-success" onClick = {this.handleSubmit}>
-                                        Login
+                                    <button  className="btn btn-success" onClick={this.handleSubmit}>
+                                        Register
                                     </button>
                                 </div>
                             </div>
@@ -98,7 +90,7 @@ class Login extends Component {
             </center>
         )
     }
-   
+    
 }
 
-export default Login;
+export default Register;

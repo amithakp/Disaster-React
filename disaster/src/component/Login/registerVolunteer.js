@@ -11,6 +11,7 @@ class RegisterVolunteer extends Component {
             name:'',
             email:'',
             password:'',
+            role:'',
             message:''
         }
     }
@@ -97,6 +98,10 @@ class RegisterVolunteer extends Component {
                                     <button  className="btn btn-success" onClick={this.handleSubmit}>
                                         Register
                                     </button>
+                                </div>
+                                <div className="parent-section">
+                                    Back To Login?
+                                    <Link to="/login">SignIn</Link>
                                 </div>
                             </div>
                         </div>
