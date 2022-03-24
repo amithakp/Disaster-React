@@ -462,8 +462,7 @@
     }
     .location{
         width: 73%;
-        /* top: 500%; */
-        margin-top:14%;
+        top: 500%;
         left: -474px;
         position: absolute;        
     }
@@ -481,7 +480,6 @@
     .relif-center-container{
         margin-left: 24px;
         flex-direction: column;
-        justify-content: normal;
     }
     .relif-right{
         margin-left: -35px;
@@ -698,6 +696,7 @@
     .location{
         left: -397px;
         width: 76%;
+        margin-top: 29%;
     }
     .relif-center-section4 {
         margin-top: 350px;
@@ -714,10 +713,13 @@
     .location{
         left: -395px;
         width: 76%;
+        margin-top: 47%;
     }
 }
 @media(max-width:828px){
-    
+    .location{
+        margin-top: 29%;
+    }
     .map-container {
         width:608px;
     }
@@ -733,6 +735,7 @@
     .location{
         left: -389px;
         width: 76%;
+        margin-top: 30%;
     }
     .map-container {
         width:604px;
@@ -778,6 +781,7 @@
      .location{
         left: -367px;
         width: 76%;
+        margin-top: 103%;
      }
      .relif-center-section4 {
         margin-top: 320px;
@@ -791,6 +795,7 @@
     .location{
         left: -352px;
         width: 76%;
+        margin-top: 104%;
      }
      .relif-left {
         width: 108%;
@@ -803,6 +808,7 @@
     .location{
         left: -345px;
         width: 76%;
+        margin-top: 107%;
      }
      .relif-left {
         width: 109%;
@@ -827,12 +833,14 @@
     .location{
         left: -345px;
         width: 76%;
+        margin-top: 110%;
      }
 }
 @media(max-width: 720px){
     .location{
         left: -336px;
         width: 76%;
+        margin-top: 110%;
      }
     .relif-center-section4 {
         margin-top: 296px;
@@ -850,6 +858,7 @@
     .location{
         left: -327px;
         width: 76%;
+        margin-top: 113%;
      }
      .map-container {
         width:512px;
@@ -868,6 +877,7 @@
     .location{
         left: -321px;
         width: 75%;
+        margin-top: 115%;
      }
      .map-container {
         width:492px;
@@ -881,6 +891,7 @@
     .location{
         left: -311px;
         width: 75%;
+        margin-top: 121%;
      }
      .relif-left {
         width: 112%;
@@ -897,6 +908,7 @@
     .location{
         left: -310px;
         width: 75%;
+        margin-top: 124%;
     }
 }
 @media(max-width: 670px){
@@ -913,6 +925,7 @@
     .location{
         left: -295px;
         width: 75%;
+        margin-top: 129%;
     }
 }
 @media(max-width: 640px){
@@ -923,6 +936,7 @@
     .location{
         left: -295px;
         width: 75%;
+        margin-top: 129%;
     }
     .relif-left {
         width: 115%;
@@ -939,6 +953,7 @@
     .location{
         left: -284px;
         width: 75%;
+        margin-top: 131%;
     }
     .relif-left {
         width: 117%;
@@ -951,6 +966,7 @@
     .location{
         left: -274px;
         width: 73%;
+        margin-top: 133%;
     }
     .relif-left {
         width: 118%;
@@ -973,6 +989,7 @@
     .location{
         left: -270px;
         width: 74%;
+        margin-top: 135%;
     }
 }
 @media(max-width:598px){
@@ -983,12 +1000,14 @@
     .location{
         left: -267px;
         width: 72%;
+        margin-top: 137%;
     }
 }
 @media(max-width:590px){
     .location{
         left: -266px;
         width: 72%;
+        margin-top: 144%;
     }
     .volunteer-needed,.volunteer-needed{
         width: 146px;
@@ -1001,6 +1020,7 @@
     .location{
         left: -252px;
         width: 72%;
+        margin-top: 146%;
     }
 }
 
@@ -1011,6 +1031,7 @@
     .location{
         left: -249px;
         width: 72%;
+        margin-top: 147%;
     }
 }
 @media(max-width:565px){
@@ -1021,6 +1042,7 @@
     .location{
         left: -252px;
         width: 72%;
+        margin-top: 150%;
     }
     .relif-center-part1 {
         width: 105%!important;
@@ -1059,6 +1081,7 @@
     .location{
         left: -241px;
         width: 72%;
+        margin-top: 152%;
     }
     .map-container {
         width: 388px;
@@ -1077,6 +1100,7 @@
     .location{
         left: -220px;
         width: 72%;
+        margin-top: 157%;
     }
     .relif-center-part1 {
         width: 106%!important;
@@ -1089,6 +1113,7 @@
     .location{
         left: -220px;
         width: 72%;
+        margin-top: 163%;
     }
     .relif-item-requested{
         width: 130px!important;
@@ -1102,6 +1127,7 @@
     .location{
         left: -215px;
         width: 74%;
+        margin-top: 167%;
     }
 }
 @media(max-width:510px){
@@ -1112,7 +1138,7 @@
     .location{
         left: -208px;
         width: 72%;
-        margin-top: 13%;
+        margin-top: 172%;
     }
     .relif-center-part1 {
         width: 117%!important;
