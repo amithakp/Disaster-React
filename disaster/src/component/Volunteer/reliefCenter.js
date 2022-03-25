@@ -15,15 +15,44 @@ class ReliefCenter extends Component{
             <>
                 <VolunteerHeader/>
                 <div className ="container">
-                    <div className="heading">Relief Center  Details</div> &nbsp;
-                    <hr/>
-                    &nbsp;&nbsp;
-                    <div className="name ">
-                        <h4>St.Johns College, Thirumala</h4>
-                        <h4>Rajagiri School of Engineering & Technology,Ernakulam</h4>
-                        <h4>IHRD College ,Thrissur</h4>
-                    </div>
-                    <p></p>
+                    <table class="table table-hover table-light">
+                        <thead>
+                            <tr>
+                            <th scope="col">No.</th>
+                            <th scope="col">First</th>
+                            <th scope="col">Last</th>
+                            <th scope="col">Handle</th>
+                            <th scope="col">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                            <td>
+                                <div class="btn-group" role="group" aria-label="Basic outlined example">
+                                <button type="button" class="btn btn-outline-warning">Edit</button>&nbsp;&nbsp;
+                                <button type="button" class="btn btn-outline-danger">Delete</button>
+                                </div>
+                            </td>
+                            </tr>
+                            <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                            <td>
+                                <div class="btn-group" role="group" aria-label="Basic outlined example">
+                                <button type="button" class="btn btn-outline-warning">Edit</button>&nbsp;&nbsp;
+                                <button type="button" class="btn btn-outline-danger">Delete</button>
+                                </div>
+                            </td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
                 </div>
             </>
         )

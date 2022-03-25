@@ -1,17 +1,7 @@
 .container{
     margin-top: 53px;
     text-align: justify;
-    border: 2px solid #383431;
-    border-radius: 47px;
-    width: fit-content;
-    margin: 58px;
+    /* border: 2px solid #383431; */
+    /* width: fit-content; */
 }
-.heading{
-    font-size:26px;
-    font-weight:bold;
-    padding: 5px;
-    text-align:center
-}
-.name > h4{
-    padding:8px;
-}
+
