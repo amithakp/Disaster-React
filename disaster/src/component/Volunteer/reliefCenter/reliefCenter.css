@@ -5,3 +5,8 @@
     /* width: fit-content; */
 }
 
+.new-container{
+    display: flex;
+    justify-content: flex-end;
+    
+}

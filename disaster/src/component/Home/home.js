@@ -1,7 +1,7 @@
 import React,{Component} from 'react';
 import {Link} from 'react-router-dom';
 import './home.css';
-import Home1 from './home1';
+import HomeHeader from'./homeHeader';
 // import VolunteerHeader from '../Volunteer/volunteerHeader';
 
 class Home extends Component{
@@ -12,22 +12,7 @@ class Home extends Component{
                 <Link to="/login" className="btn btn-success btn-md">Admin</Link> &nbsp;&nbsp;
                 <Link to="/volunteerLogin" className="btn btn-warning btn-md">Volunteer</Link>
             </center> */}
-        <nav className="navbar navbar-expand-lg navbar navbar-dark bg-dark">
-            <div className="container-fluid">
-            
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span className="navbar-toggler-icon"></span>
-                </button>
-                <div className="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul className="navbar-nav">
-                </ul>
-                </div>
-                <form className="d-flex">
-                    <Link to="/registerAdmin"  className="btn btn-outline-primary">Admin</Link>&nbsp;&nbsp;
-                    <Link to="/registerVolunteer"  className="btn btn-outline-success">Volunteer</Link>
-                </form>
-            </div>
-        </nav>
+        <HomeHeader/>
         <div className="mainDisaster">
             <div className="disaster">
                 <span className="disasterName">Kerala Flood 2020</span>
@@ -58,7 +43,6 @@ class Home extends Component{
         {/* <div className="disasterSubPara">Turn off utilities, main switches or valves and don't touch electrical equipment if you are standing in water or wet surface. Keep the valuable items and important documents at safe heights. Never drive into flooded areas. If floodwaters rise around your car, abandon the car and try moving to higher grounds.
             </div>       */}
 
-        <Home1/>
         </>
         )
     }

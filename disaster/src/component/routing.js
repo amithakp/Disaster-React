@@ -6,8 +6,13 @@ import Login from './Login/login';
 import RegisterAdmin from './Login/registerAdmin';
 import VolunteerAdmin from './Login/registerVolunteer';
 import Home from './Home/home';
-import ReliefCenter from './Volunteer/reliefCenter';
-import ReliefItem from './Volunteer/reliefItem';
+import Home1 from './Home/home1';
+import Home2 from './Home/home2';
+import Home3 from './Home/home3';
+import ReliefCenter from './Volunteer/reliefCenter/reliefCenter';
+import CollectionCentre from './Volunteer/collectionCenter/collectionCentre';
+import ReliefItem from './Volunteer/reliefItem/reliefItem';
+// import ReliefItem from './Volunteer/reliefItem';
 import Blog from './Volunteer/blog';
 import Tracking from './Volunteer/tracking';
 import Report from './Volunteer/report';
@@ -22,6 +27,9 @@ const Routing = () => {
     return(
         <BrowserRouter>
             <Route exact path="/" component={Home}/>
+            <Route  path="/home1" component={Home1}/>
+            <Route  path="/home2" component={Home2}/>
+            <Route  path="/home3" component={Home3}/>
             <Route  path="/adminHeader" component={AdminHeader}/>
             <Route  path="/volunteerHeader" component={VolunteerHeader}/>
             <Route  path="/registerAdmin" component={RegisterAdmin}/>
@@ -29,7 +37,8 @@ const Routing = () => {
             {/* <Route  path="/register" component={Register}/> */}
             <Route  path="/login" component={Login}/>
             {/* <Route  path="/login" component={Login}/> */}
-            <Route  path="/reliefCenter" component={ReliefCenter}/>
+            <Route exact path="/reliefCenter" component={ReliefCenter}/>
+            <Route exact path="/collectionCentre" component={CollectionCentre}/>
             <Route  path="/reliefItem" component={ReliefItem}/>
             <Route  path="/blog" component={Blog}/>
             <Route  path="/tracking" component={Tracking}/>

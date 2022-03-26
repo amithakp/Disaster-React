@@ -41,7 +41,7 @@ class VolunteerHeader extends Component {
                                 <Link to ="/reliefCenter" className="nav-link" >Relief centre</Link>
                             </li>
                             <li className="nav-item">
-                                <Link to ="/reliefCenter" className="nav-link" >Collection Centre</Link>
+                                <Link to ="/collectionCentre" className="nav-link" >Collection Centre</Link>
                             </li>
                             <li className="nav-item">
                                 <Link to ="/reliefItem" className="nav-link" href="#">Relief Item</Link> 
