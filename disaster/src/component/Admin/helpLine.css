@@ -1,20 +1,12 @@
-.mainContainer{
-    width: 100%;
-    height: auto;
-    background-color:rgb(214, 214, 214);
-    /* background-color: rgb(225 219 219 / 36%); */
-    margin-top: 60px;
-    padding:65px;
+.container-fluid{
+    display:flex;
+    text-align: justify;
+    justify-content: center;
+    padding:30px;
 }
-.mainHead{
-    padding:10px;
-}
-.mainText{
-    font-size:25px;
-    text-align:justify;
-}
-.mainSubText{
-    font-size:20px;
-    text-align:justify;
-    margin-top:-32px;    
+.heading{
+    font-size: 25px;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
 }

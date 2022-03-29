@@ -12,6 +12,9 @@
     text-align: center;
     margin-left: -65px;
 }
+.mainSectionRow .col{
+    box-Shadow:none;
+}
 .reliefCenter1 {
     width: 300px;
     height: 150px;
@@ -74,8 +77,8 @@
     margin-left: 18px;
     float: left;
     min-height: 250px;
-
 }
+
 .notificationSection{
     width: 337px;
     /* height: 314px; */

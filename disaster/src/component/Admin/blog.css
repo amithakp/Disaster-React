@@ -4,8 +4,6 @@
     font-weight: bold;
     text-transform: uppercase;
 }
-.containerCard{
-    display:flex;
-    text-align: justify;
-    padding:30px;
+#cardHeight{
+    min-height: 250px;
 }

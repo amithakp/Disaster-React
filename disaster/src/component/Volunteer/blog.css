@@ -1,0 +1,14 @@
+.heading{
+    font-size: 25px;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.containerCard{
+    display:flex;
+    text-align: justify;
+    padding:30px;
+}
+.col{
+    box-shadow: 10px 15px 20px rgb(116, 111, 111);
+}

@@ -36,6 +36,7 @@ class CollectionCentre extends Component{
         return (
             <>
             <VolunteerHeader/>
+            <p className="heading">Collection Centre</p>
             <div className ="container">
                 <div className="new-container">
                     {/* <Link to="reliefCenter/addNew" className="btn btn-primary">New</Link> */}

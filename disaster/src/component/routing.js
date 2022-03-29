@@ -12,11 +12,12 @@ import Home3 from './Home/home3';
 import ReliefCenter from './Volunteer/reliefCenter/reliefCenter';
 import CollectionCentre from './Volunteer/collectionCenter/collectionCentre';
 import ReliefItem from './Volunteer/reliefItem/reliefItem';
+import EditReliefCentre from './Volunteer/reliefCenter/editReliefCentre';
 // import ReliefItem from './Volunteer/reliefItem';
-import Blog from './Volunteer/blog';
+// import Blog from './Volunteer/blog';
+import Blog from './Volunteer/blogDisplay';
 import Tracking from './Volunteer/tracking';
 import Report from './Volunteer/report';
-import News from './Volunteer/news';
 import BlogAdmin from './Admin/blog';
 import ReliefCampaign from './Admin/reliefCampaign';
 import HelpLine from './Admin/helpLine';
@@ -27,7 +28,7 @@ const Routing = () => {
     return(
         <BrowserRouter>
             <Route exact path="/" component={Home}/>
-            <Route  path="/home1" component={Home1}/>
+            <Route  path="/reliefCenterOpened" component={Home1}/>
             <Route  path="/home2" component={Home2}/>
             <Route  path="/home3" component={Home3}/>
             <Route  path="/adminHeader" component={AdminHeader}/>
@@ -40,10 +41,11 @@ const Routing = () => {
             <Route exact path="/reliefCenter" component={ReliefCenter}/>
             <Route exact path="/collectionCentre" component={CollectionCentre}/>
             <Route  path="/reliefItem" component={ReliefItem}/>
-            <Route  path="/blog" component={Blog}/>
+            <Route path="/rereliefCenter/editReliefCentre" component={EditReliefCentre}/>
+            {/* <Route  path="/blog" component={Blog}/> */}
+            <Route  path="/blogDisplay" component={Blog}/>
             <Route  path="/tracking" component={Tracking}/>
             <Route  path="/report" component={Report}/>
-            <Route  path="/news" component={News}/>
             <Route  path="/blogAdmin" component={BlogAdmin}/>
             <Route  path="/reliefCampaign" component={ReliefCampaign}/>
             <Route  path="/helpLine" component={HelpLine}/>

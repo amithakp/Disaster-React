@@ -41,6 +41,14 @@ body{
     background-color: #FFFFFF;
     border-radius:30px;
 }
+
+.dsbtn:hover{
+    border: 1px solid rgb(218, 205, 205);
+    background: rgb(30, 31, 29);
+    transition:1s;
+    color: #ffffff;
+}
+
 .reliefCenter{
     width: 143px;
     height: 144px;  

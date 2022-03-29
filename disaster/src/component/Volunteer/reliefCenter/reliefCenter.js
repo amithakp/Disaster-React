@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 import VolunteerHeader from '../volunteerHeader';
 import './reliefCenter.css';
 import AddNew  from './addNew';
+import EditNew from './editReliefCentre';
 
 const reliefCenterGet ="http://localhost:8121/reliefCenter";
 
@@ -10,26 +11,42 @@ class ReliefCenter extends Component{
     constructor(props){
         super(props)
         this.state = {
-            // reliefCenterName: '',
-            // totalAccomodation:'',
-            // vaccancy:''
+            disaster_reliefCenterid:'',
+            reliefCenterName: '',
+            totalAccomodation:'',
+            vaccancy:'',
             ReliefCenterData:'',
             // index:''
         }
     }
+    //  edit = (data) =>{
+    //     console.log(data, "item clicked")
+    //  }
      renderTable =(ReliefCenterData)=> {
         if(ReliefCenterData){
             return ReliefCenterData.map((item,index)=>{
                 return (
                     <tr key={item._id}>
                         <th scope="row">{index + 1}</th>
-                        {/* <td>{index + 1}</td> */}
+                        <td>{item.disaster_reliefCenterid}</td>
                         <td>{item.reliefCenterName}</td>
                         <td>{item.totalAccomodation}</td>
                         <td>{item.vaccancy}</td>
                         <td>
                             <div className="btn-group" role="group" aria-label="Basic outlined example">
-                            <button type="button" className="btn btn-outline-warning">Edit</button>&nbsp;&nbsp;
+                            <button  type="button" onClick={ () => this.setState({
+                                disaster_reliefCenterid:item.disaster_reliefCenterid,
+                                reliefCenterName:item.reliefCenterName,
+                                totalAccomodation:item.totalAccomodation,
+                                vaccancy:item.vaccancy
+
+                                })} 
+                                className="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#editModal">
+                                Edit
+                            </button>&nbsp;&nbsp;<EditNew disaster_reliefCenterid={this.state.disaster_reliefCenterid}
+                                reliefCenterName= {this.state.reliefCenterName}
+                                totalAccomodation={this.state.totalAccomodation}
+                                vaccancy={this.state.vaccancy}/>
                             <button type="button" className="btn btn-outline-danger">Delete</button>
                             </div>
                         </td>
@@ -43,6 +60,7 @@ class ReliefCenter extends Component{
         return (
             <>
             <VolunteerHeader/>
+            <p className="heading">Relief Center</p>
             <div className ="container">
                 <div className="new-container">
                     {/* <Link to="reliefCenter/addNew" className="btn btn-primary">New</Link> */}
@@ -55,6 +73,7 @@ class ReliefCenter extends Component{
                     <thead>
                         <tr>
                         <th scope="col">No.</th>
+                        <th scope="col">Disaster Relief Centerid</th>
                         <th scope="col">Relief Centre Name</th>
                         <th scope="col">Total Accomodation</th>
                         <th scope="col">Vaccancy</th>
@@ -74,7 +93,7 @@ class ReliefCenter extends Component{
         .then((res) => res.json ())
         .then((data) => {
             this.setState({ReliefCenterData:data})
-            
+            console.log(data);
         })
     }
 }

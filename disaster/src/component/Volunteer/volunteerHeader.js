@@ -35,7 +35,7 @@ class VolunteerHeader extends Component {
                             <a className="nav-link active" aria-current="page" href="#">Home</a>
                             </li> */}
                             <li className="nav-item">
-                            <Link to="/blog" className="nav-link" href="#">Blog</Link>
+                            <Link to="/blogDisplay" className="nav-link" href="#">Blog</Link>
                             </li>
                             <li className="nav-item">
                                 <Link to ="/reliefCenter" className="nav-link" >Relief centre</Link>
@@ -51,9 +51,6 @@ class VolunteerHeader extends Component {
                             </li>
                             <li className="nav-item">
                                 <Link to ="/report" className="nav-link" href="#">Report</Link> 
-                            </li>
-                            <li className="nav-item">
-                                <Link to ="/news" className="nav-link" href="#">News</Link>
                             </li>
                         </ul>
                         </div>

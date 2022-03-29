@@ -21,7 +21,7 @@ class Home extends Component{
             <div className="disasterRight">
                 {/* <div className="disasterContainer"> */}
                     <div className="reliefCenter">
-                        <button  className=" dsbtn btn btn-success">Relief Center Opened</button>
+                        <Link to = "/reliefCenterOpened" ><button  className=" dsbtn btn btn-success">Relief Center Opened</button></Link>
                     </div>
                     <div className="collectionCenter">
                         <button className="dsbtn btn btn-success">Collection Center Opened</button>

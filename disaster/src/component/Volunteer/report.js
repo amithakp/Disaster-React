@@ -2,27 +2,55 @@ import React,{Component} from 'react';
 import VolunteerHeader from './volunteerHeader';
 import './report.css';
 
-class Report extends Component {
+
+const url ="http://localhost:8121/report";
+
+class Report extends Component{
+    constructor(props){
+        super(props)
+        this.state = {
+            ReportData:''
+        }
+    }
+
+    renderCard = (ReportData) => {
+        if(ReportData){
+            return ReportData.map((item,index)=>{
+                return (
+                    <div className="col" key={item._id}>
+                        <div className="card border-info">
+                        {/* <img src="..." className="card-img-top" alt="..."/> */}
+                        <div className="card-body">
+                            <h4 className="card-title">{item.report_Name}</h4>
+                            <p className="card-text">{item.report_description}</p>
+                        </div>
+                        </div>
+                    </div>
+                )
+            })
+        }
+    }
     render() {
-        // if(localStorage.getItem('ltk') == null){
-        //     return(
-        //         <>
-        //         <h2>You Need to Login First </h2>
-        //         </>
-        //     )
-        // }
+       
         return (
             <>
                 <VolunteerHeader/>
-                <div className="container-fluid">
-                    <span className="heading">Situation Report on Kerala Floods and Landslides</span>
-                    <p className="text-justify">Kerala is witnessing high-intensity floods due to the incessant rains over the past few days.
-                        <br/>Residents are cut off in parts of the coastal state of Kerala as the rain started to intensify from late Friday, 15th October 2021. As per the authorities, the worst-affected areas are Kottayam and Idukki, which received 164.5 millimetres and 305.5 mm of rainfall, respectively, since Saturday morning. The heavy rains triggered landslides and swelled many rivers across the state. Roads are swept away, houses are damaged and trees uprooted. Several villages in hilly areas are cut off. At least 26 people have died in landslides and floods triggered by heavy rains in south-western India.</p>
-                        <p id="secondPara">Five Children among are dead. There are fears that the death toll could rise further as many people are missing. Eleven bodies have been found so far in Idukki district and another fourteen in Kottayam district and thousands of people have been evacuated and at least 100 relief camps have been set up. Here is the video showing the flash flood barrelling into the town of Erattupetta in southern Kerala and another clip showing a house disappearing into a river that overflowed into its backyard shows widespread destruction in Kerala.</p>
+                <p className="heading">Report</p>
+                <div className="containerCard">
+                    <div className="row row-cols-1 row-cols-md-1 g-4">
+                        {this.renderCard(this.state.BlogData)} 
+                    </div>
                 </div>
-                <hr/>
             </>
         )
+    }
+    componentDidMount(){
+        fetch(url, {method:'GET'})
+        .then((res) => res.json ())
+        .then((data) => {
+            this.setState({BlogData:data})
+            console.log(data);
+        })
     }
 }
 
