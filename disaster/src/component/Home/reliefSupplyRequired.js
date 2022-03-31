@@ -25,6 +25,7 @@ class ReliefSupplyRequired extends Component{
                 return (
                     <tr key={item._id}>
                         <th scope="row">{index + 1}</th>
+                        <td>{item.reliefCenterName}</td>
                         <td>{item.reliefItemName}</td>
                         <td>{item.quantity}</td>
                         <td>{item.description}</td>
@@ -76,6 +77,7 @@ class ReliefSupplyRequired extends Component{
                     <thead>
                         <tr>
                         <th scope="col">No.</th>
+                        <th scope="col">Relief Centre Name</th>
                         <th scope="col">Relief Item Name</th>
                         <th scope="col">Quantity</th>
                         <th scope="col">Description</th>
