@@ -2,26 +2,26 @@ import React,{ Component} from 'react';
 import AdminHeader from '../Admin/adminHeader';
 import './helpLine.css';
 
-const url ="http://localhost:8121/contact";
+const url ="http://localhost:8121/helpline";
 
 class HelpLine extends Component {
     constructor(props){
         super(props)
         this.state = {
-            ContactData:''
+            HelplineData:''
         }
     }
 
-    renderCard = (ContactData) => {
-        if(ContactData){
-            return ContactData.map((item,index)=>{
+    renderCard = (HelplineData) => {
+        if(HelplineData){
+            return HelplineData.map((item,index)=>{
                 return (
                     <div className="col" key={item._id}>
                         <div className="card text-white bg-dark mb-3 border-info">
                         {/* <img src="..." className="card-img-top" alt="..."/> */}
                         <div className="card-body">
-                            <h4 className="card-title">{item.reliefCenterName}</h4>
-                            <p className="card-text">{item.contact_Number}</p>
+                            <h4 className="card-title">{item.helplineName}</h4>
+                            <p className="card-text">{item.helplinrNumber}</p>
                         </div>
                         </div>
                     </div>
@@ -38,7 +38,7 @@ class HelpLine extends Component {
                 <div className="container-fluid">
                     
                     <div className="row row-cols-1 row-cols-md-2 g-4">
-                        {this.renderCard(this.state.ContactData)} 
+                        {this.renderCard(this.state.HelplineData)} 
                     </div>
                 </div>
             </>
@@ -48,7 +48,7 @@ class HelpLine extends Component {
         fetch(url, {method:'GET'})
         .then((res) => res.json ())
         .then((data) => {
-            this.setState({ContactData:data})
+            this.setState({HelplineData:data})
             console.log(data);
         })
         // fetch(reliefCenterGet, {method:'GET'})
