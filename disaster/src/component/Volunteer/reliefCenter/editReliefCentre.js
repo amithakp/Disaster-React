@@ -7,6 +7,7 @@ class EditNew  extends Component {
         super(props)
         this.state = {
             disaster_reliefCenterid:'',
+            contact_Number:'',
             disaster_id: 1,
             reliefCenterName: '',
             totalAccomodation:'',
@@ -21,7 +22,7 @@ class EditNew  extends Component {
                 'content-type': 'application/json'
             },
             body:JSON.stringify({
-                disaster_reliefCenterid:event.target.reliefCenterId.value,
+                contact_Number:event.target.contact_Number.value,
                 reliefCenterName:event.target.reliefCenterName.value,
                 totalAccomodation:event.target.totalAccomodation.value,
                 vaccancy:event.target.vaccancy.value
@@ -30,7 +31,7 @@ class EditNew  extends Component {
         .then(res => res.json())
         .then((result) =>{
             console.log(result,"inside handleEditReliefCentre")
-            this.setState({[this.state.disaster_reliefCenterid]:event.target.disaster_reliefCenterid,
+            this.setState({[this.state.contact_Number]:event.target.contact_Number,
                 [this.state.reliefCenterName]:event.target.reliefCenterName,
                 [this.state.totalAccomodation]:event.target.totalAccomodation,
                 [this.state.vaccancy]:event.target.vaccancy
@@ -93,8 +94,8 @@ class EditNew  extends Component {
                                     <div className="w-75 mx-auto shadow p-5">
                                         <h2 className="text-center mb-4">Edit  Centre</h2>
                                         <div className="mb-3">
-                                            <label>Relief centre Id</label>
-                                            <input type="text" name="disaster_reliefCenterid" defaultValue={this.props.disaster_reliefCenterid} onChange={this.handleChange} className="form-control" placeholder="Relief centre id" disabled/>
+                                            <label>Contact Number</label>
+                                            <input type="text" name="contact_Number" defaultValue={this.props.contact_Number} onChange={this.handleChange} className="form-control" placeholder="Contact Number" />
                                         </div>
                                         <div className="mb-3">
                                             <label>Relief centre name</label>

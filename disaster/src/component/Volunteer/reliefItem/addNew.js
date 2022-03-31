@@ -9,6 +9,7 @@ class AddNew  extends Component {
             disaster_reliefItemid: Math.floor(Math.random()*1000),
             // disaster_reliefCenterid:'',
             disaster_id: 1,
+            reliefCenterName: '',
             reliefItemName: '',
             quantity:'',
             description:''
@@ -45,6 +46,10 @@ class AddNew  extends Component {
                                     <div className="w-75 mx-auto shadow p-5">
                                         <h2 className="text-center mb-4">Add New Item</h2>
                                         <div className="mb-3">
+                                            <label>Centre name</label>
+                                            <input type="text" name="reliefCenterName" value={this.state.reliefCenterName} onChange={this.handleChange} className="form-control" placeholder="Relief centre name"/>
+                                        </div>
+                                        <div className="mb-3">
                                             <label>Item Name</label>
                                             <input type="text" name="reliefItemName" value={this.state.reliefItemName} onChange={this.handleChange} className="form-control" placeholder="ItemName" re/>
                                         </div>
@@ -58,7 +63,7 @@ class AddNew  extends Component {
                                         </div>
                                         <div className="d-grid gap-2">
                                             <button type="submit" onClick={this.handleAddNewaReliefItem} className="btn btn-success d-grid gap-2 ">
-                                                Add New Item
+                                                Request New Item
                                             </button>
                                         </div>   
                                     </div>

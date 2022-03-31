@@ -8,7 +8,9 @@ import VolunteerAdmin from './Login/registerVolunteer';
 import Home from './Home/home';
 import Home1 from './Home/home1';
 import Home2 from './Home/home2';
-import Home3 from './Home/home3';
+import Details from './Volunteer/details';
+import CollectionCentreOpened from './Home/collectionCentreOpened';
+import ReliefSupplyRequired from './Home/reliefSupplyRequired';
 import ReliefCenter from './Volunteer/reliefCenter/reliefCenter';
 import CollectionCentre from './Volunteer/collectionCenter/collectionCentre';
 import ReliefItem from './Volunteer/reliefItem/reliefItem';
@@ -29,8 +31,10 @@ const Routing = () => {
         <BrowserRouter>
             <Route exact path="/" component={Home}/>
             <Route  path="/reliefCenterOpened" component={Home1}/>
-            <Route  path="/home2" component={Home2}/>
-            <Route  path="/home3" component={Home3}/>
+            <Route  path="/collectionCenterOpened" component={CollectionCentreOpened}/>
+            <Route  path="/reliefSupplyRequired" component={ReliefSupplyRequired}/>
+            <Route  path="/home2/:id" component={Home2}/>
+            <Route  path="/details" component={Details}/>
             <Route  path="/adminHeader" component={AdminHeader}/>
             <Route  path="/volunteerHeader" component={VolunteerHeader}/>
             <Route  path="/registerAdmin" component={RegisterAdmin}/>

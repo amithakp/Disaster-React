@@ -12,6 +12,7 @@ class ReliefCenter extends Component{
         super(props)
         this.state = {
             disaster_reliefCenterid:'',
+            contact_Number:'',
             reliefCenterName: '',
             totalAccomodation:'',
             vaccancy:'',
@@ -28,14 +29,14 @@ class ReliefCenter extends Component{
                 return (
                     <tr key={item._id}>
                         <th scope="row">{index + 1}</th>
-                        <td>{item.disaster_reliefCenterid}</td>
                         <td>{item.reliefCenterName}</td>
+                        <td>{item.contact_Number}</td>
                         <td>{item.totalAccomodation}</td>
                         <td>{item.vaccancy}</td>
                         <td>
                             <div className="btn-group" role="group" aria-label="Basic outlined example">
                             <button  type="button" onClick={ () => this.setState({
-                                disaster_reliefCenterid:item.disaster_reliefCenterid,
+                                contact_Number:item.contact_Number,
                                 reliefCenterName:item.reliefCenterName,
                                 totalAccomodation:item.totalAccomodation,
                                 vaccancy:item.vaccancy
@@ -43,7 +44,7 @@ class ReliefCenter extends Component{
                                 })} 
                                 className="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#editModal">
                                 Edit
-                            </button>&nbsp;&nbsp;<EditNew disaster_reliefCenterid={this.state.disaster_reliefCenterid}
+                            </button>&nbsp;&nbsp;<EditNew contact_Number={this.state.contact_Number}
                                 reliefCenterName= {this.state.reliefCenterName}
                                 totalAccomodation={this.state.totalAccomodation}
                                 vaccancy={this.state.vaccancy}/>
@@ -73,8 +74,8 @@ class ReliefCenter extends Component{
                     <thead>
                         <tr>
                         <th scope="col">No.</th>
-                        <th scope="col">Disaster Relief Centerid</th>
                         <th scope="col">Relief Centre Name</th>
+                        <th scope="col">Contact</th>
                         <th scope="col">Total Accomodation</th>
                         <th scope="col">Vaccancy</th>
                         <th scope="col">Action</th>

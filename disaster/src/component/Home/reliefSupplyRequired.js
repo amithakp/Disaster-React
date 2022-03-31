@@ -3,10 +3,10 @@ import {Link} from 'react-router-dom';
 import HomeHeader from'./homeHeader';
 import './home1.css';
 
-const reliefCenterGet ="http://localhost:8121/reliefCenter";
+const reliefSupplyRequiredGet ="http://localhost:8121/reliefItem";
 const url ="http://localhost:8121/news";
 
-class Home1 extends Component{
+class ReliefSupplyRequired extends Component{
     constructor(props){
         super(props)
         this.state = {
@@ -14,23 +14,23 @@ class Home1 extends Component{
             // reliefCenterName: '',
             // totalAccomodation:'',
             // vaccancy:'',
-            ReliefCenterData:'',
+            ReliefSupplyRequiredData:'',
             NewsData:''
             // index:''
         }
     }
-    renderTable =(ReliefCenterData)=> {
-        if(ReliefCenterData){                   
-            return ReliefCenterData.map((item,index)=>{
+    renderTable =(ReliefSupplyRequiredData)=> {
+        if(ReliefSupplyRequiredData){
+            return ReliefSupplyRequiredData.map((item,index)=>{
                 return (
                     <tr key={item._id}>
                         <th scope="row">{index + 1}</th>
-                        <td>{item.reliefCenterName}</td>
-                        <td>{item.totalAccomodation}</td>
-                        <td>{item.vaccancy}</td>
+                        <td>{item.reliefItemName}</td>
+                        <td>{item.quantity}</td>
+                        <td>{item.description}</td>
                         <td>
                            
-                        <Link to ={`/home2/${item.disaster_reliefCenterid}`} key={item.disaster_reliefCenterid}><button type="button" className="btn btn-outline-light btn btn-dark">Details</button></Link>
+                        <Link to ={`/home2/${item.disaster_reliefItemid}`} key={item.disaster_reliefItemid}><button type="button" className="btn btn-outline-light btn btn-dark">Details</button></Link>
                             
                         </td>
                     </tr>
@@ -58,15 +58,15 @@ class Home1 extends Component{
                     <div className="row mainSectionRow">
                         <div className="col">
                             <button className=" reliefCenter1 btn btn-success"><span>45</span>
-                                <div>Relief Center Opened</div></button>
+                                <div>Collection Center Opened</div></button>
                         </div>
                         <div className="col">
                             <button className=" totalAcoomodated btn btn-success"><span>2475</span>
-                            <div>Tolal Nos Accomodated</div></button>
+                            <div>Tolal Nos Collection</div></button>
                         </div>
                         <div className="col">
                             <button className=" remainingVaccancy btn btn-success"><span>84</span>
-                            <div>Remaining Vaccancy</div></button>
+                            <div>Remaining Collection</div></button>
                         </div>
                     </div>
                 </div>                 </div>
@@ -76,14 +76,14 @@ class Home1 extends Component{
                     <thead>
                         <tr>
                         <th scope="col">No.</th>
-                        <th scope="col">Relief Centre Name</th>
-                        <th scope="col">Total Accomodation</th>
-                        <th scope="col">Vaccancy</th>
+                        <th scope="col">Relief Item Name</th>
+                        <th scope="col">Quantity</th>
+                        <th scope="col">Description</th>
                         <th scope="col">Action</th>
                         </tr>
                     </thead>
                     <tbody>
-                        {this.renderTable(this.state.ReliefCenterData)}  
+                        {this.renderTable(this.state.ReliefSupplyRequiredData)}  
                     </tbody>
                 </table></div>
                 <div className="notificationSection">
@@ -95,10 +95,10 @@ class Home1 extends Component{
     }
     
     componentDidMount(){
-        fetch(reliefCenterGet, {method:'GET'})
+        fetch(reliefSupplyRequiredGet, {method:'GET'})
         .then((res) => res.json ())
         .then((data) => {
-            this.setState({ReliefCenterData:data})
+            this.setState({ReliefSupplyRequiredData:data})
             console.log(data);
         })
         // fetch notification
@@ -111,4 +111,4 @@ class Home1 extends Component{
     }
 }
 
-export default Home1;    
+export default ReliefSupplyRequired;    

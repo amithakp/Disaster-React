@@ -50,7 +50,7 @@ class VolunteerHeader extends Component {
                                 <Link to ="/tracking" className="nav-link" href="#">Tracking</Link> 
                             </li>
                             <li className="nav-item">
-                                <Link to ="/report" className="nav-link" href="#">Report</Link> 
+                                <Link to ="/details" className="nav-link" href="#">Details</Link> 
                             </li>
                         </ul>
                         </div>

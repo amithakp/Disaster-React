@@ -24,10 +24,10 @@ class Home extends Component{
                         <Link to = "/reliefCenterOpened" ><button  className=" dsbtn btn btn-success">Relief Center Opened</button></Link>
                     </div>
                     <div className="collectionCenter">
-                        <button className="dsbtn btn btn-success">Collection Center Opened</button>
+                        <Link to ="/collectionCenterOpened"><button className="dsbtn btn btn-success">Collection Center Opened</button></Link>
                     </div>
                     <div className="reliefSupplyRequired">
-                        <button className="dsbtn btn btn-success">Relief Supply Required</button>
+                    <Link to ="/reliefSupplyRequired"><button className="dsbtn btn btn-success">Relief Supply Required</button></Link>
                     </div>
                 {/* </div> */}
             </div>

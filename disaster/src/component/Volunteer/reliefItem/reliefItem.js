@@ -23,6 +23,7 @@ class ReliefItem extends Component{
                     <tr key={item._id}>
                         <th scope="row">{index + 1}</th>
                         {/* <td>{index + 1}</td> */}
+                        <td>{item.reliefCenterName}</td>
                         <td>{item.reliefItemName}</td>
                         <td>{item.quantity}</td>
                         <td>{item.description}</td>
@@ -55,7 +56,8 @@ class ReliefItem extends Component{
                     <thead>
                         <tr>
                         <th scope="col">No.</th>
-                        <th scope="col">Relief Item Name</th>
+                        <th scope="col">Relief Centre Name</th>
+                        <th scope="col">Item Name</th>
                         <th scope="col">Quantity</th>
                         <th scope="col">Description</th>
                         <th scope="col">Action</th>

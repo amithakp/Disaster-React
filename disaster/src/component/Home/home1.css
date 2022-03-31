@@ -1,10 +1,12 @@
 .paddingDiv{
     width: 100%;
     padding: 30px;
+    margin-left: 11px;
     text-align: justify;
 }
 .secondMainSection{
     margin-left: 2%;
+    padding-bottom: 3%;
     /* padding: 3%; */
     /* margin-top: -77px; */
 }
@@ -63,30 +65,21 @@
     height: 25px;
     margin-left: -42px;
 }
-.notification{
-    width: 328px;
-    height: 390px;
-    margin-left: 865px;
-    margin-top: -85px;
-    display: inline-block;
-    position: absolute;
-    /* float: left; */
-    background-color: antiquewhite;
-}
-.tableSection{
-    margin-left: 18px;
-    float: left;
-    min-height: 250px;
+.tableDiv{
+    padding: 1px 54px;
 }
 
+
 .notificationSection{
-    width: 337px;
+    width: 92%;
     /* height: 314px; */
     min-height: 250px;
-    float: right;
-    margin-right: 90px;
+    /* float: right; */
+    margin-left: 57px;
     /* margin-top: -7px; */
+    text-align: center;
     margin-top: 14px;
+    /* padding: 1px 78px; */
     border-radius: 30px;
     background-color: #FFFFFF;
 }
@@ -94,21 +87,42 @@
     font-size:18px;
     padding: 23px;
 }
-
+.relif-supply-section{
+    height: fit-content;
+    margin-left: 4%;
+    margin-top: 2%;
+    width: 464px;
+    border-radius: 30px;
+    min-width: 220px;
+    background-color: #ece8e8;
+}
+.notificationContainer{
+    display:flex;
+    justify-content:space-around;
+    padding-bottom: 12px;
+}
+.notification_btn_rsr{
+    border: none;
+    width: 387px;
+    padding: 4px 3px;
+    border-radius: 30px;
+    color: #ffff;
+    background-color: #519db7;
+}
 
 @media(max-width:1466px){
     .mainSectionRow {
         margin-left: -120px;
     }
 }
-@media(max-width:1458px){
+/* @media(max-width:1458px){
     .notificationSection{
         margin-right: 92px;
-    }
+    } */
     /* .relif-right{
         margin-right: -5px;
-    } */
-}
+    } 
+}*/
 @media(max-width:1425px){
     .notificationSection{
         margin-right: 84px;
@@ -172,18 +186,15 @@
 @media(max-width:1175px){
     .notificationSection{
         margin-right: 25px;
-        width: 310px;
     }
 }
 @media(max-width:1168px){
     .notificationSection{
         margin-right: 30px;
-        width: 296px;
         margin-top: 15px;
     }
     .tableSection{
         margin-left: 18px;
-        width: 628px;
     }
 
 }
@@ -221,9 +232,8 @@
 }
 @media(max-width:1023px){
     .notificationSection{
-        margin-left: 62px;
-        float: left;
-        width: 733px;
+        margin-left: 50px;        
+        width: 90%;
     }
     .tableSection{
         margin-left: 8%;
@@ -245,24 +255,24 @@
 }
 
 @media(max-width:900px){
-    .notificationSection{
+    /* .notificationSection{
         margin-left: 33px;
-    }
+    } */
     .tableSection{
         margin-left: 5%;
     }
 }
 @media(max-width:870px){
-    .notificationSection{
+    /* .notificationSection{
         margin-left: 23px;
-    }
+    } */
     .tableSection{
         margin-left: 5%;
     }
 }
 @media(max-width:840px){
     .notificationSection{
-        margin-left: 23px;
+        margin-left: 55px;
     }
     .tableSection{
         margin-left: 5%;
@@ -282,6 +292,12 @@
         width: 76%;
     }
 }
+@media(max-width:800px){
+    .notificationSection{
+        margin-left: 52px;
+        width: 86%;   
+    }
+}
 
 @media(max-width:768px){
     .secondMainSection {
@@ -289,13 +305,17 @@
         /* padding: 3%;
         margin-top: -77px; */
     }
-    .notificationSection{
+    /* .notificationSection{
         margin-right: 188px;
-    }
+    } */
 }
 @media(max-width:700px){
     .mainSectionRow {
         margin-left: -19px;
+    }
+    .notificationSection{
+        margin-left: 55px;
+        width: 84%;
     }
 }
 @media(max-width:578px){
@@ -309,5 +329,14 @@
     }
     .tableSection{
         margin-left: -17px;
+    }
+}
+@media(max-width:524px){
+    .tableDiv{
+        margin-left: -5px;
+   }
+   .notificationSection {
+    margin-left: 50px;
+    width: 437px;
     }
 }

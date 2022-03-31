@@ -8,6 +8,7 @@ class AddNew  extends Component {
         this.state = {
             disaster_reliefCenterid: Math.floor(Math.random()*1000),
             disaster_id: 1,
+            contact_Number: '',
             reliefCenterName: '',
             totalAccomodation:'',
             vaccancy:''
@@ -46,6 +47,10 @@ class AddNew  extends Component {
                                         <div className="mb-3">
                                             <label>Relief centre name</label>
                                             <input type="text" name="reliefCenterName" value={this.state.reliefCenterName} onChange={this.handleChange} className="form-control" placeholder="Relief centre name"/>
+                                        </div>
+                                        <div className="mb-3">
+                                            <label>Contact</label>
+                                            <input type="text" name="contact_Number" value={this.state.contact_Number} onChange={this.handleChange} className="form-control" placeholder="contact Number"/>
                                         </div>
                                         <div className="mb-3">
                                             <label>Total Accomodation</label>
