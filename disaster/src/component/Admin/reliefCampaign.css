@@ -7,8 +7,7 @@
 .containerCard{
     display:flex;
     text-align: justify;
-    padding:30px;
-}
+    margin-left: 25px!important;}
 .hero-btn{
     border: 1px solid #ffff;
     padding: 12px 34px;
