@@ -56,7 +56,7 @@ class Login extends Component {
                 <div className="container-fluid">
                 <br/>
                 <div className="panel panel-success">
-                    <div className="panel-heading">
+                    <div className="panel-heading text-center">
                     <span id="login-span">Login</span>
                     </div>
                     <div className="panel-body">

@@ -43,7 +43,7 @@ class RegisterVolunteer extends Component {
                 <div className="container-fluid">
                 <br/>
                 <div className="panel panel-success">
-                    <div className="panel-heading">
+                    <div className="panel-heading text-center">
                             <span>Register</span>
                         </div>
                         <div className="panel-body">
